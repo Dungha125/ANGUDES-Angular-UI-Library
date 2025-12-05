@@ -1,0 +1,58 @@
+{
+  "name": "angudes",
+  "version": "0.0.1",
+  "description": "Angular UI Component Library - A comprehensive collection of reusable UI components",
+  "author": "Dungha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dungha125/ANGUDES-Angular-UI-Component-Library.git"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "components",
+    "library",
+    "angudes"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build angudes",
+    "build:prod": "ng build angudes --configuration production",
+    "build:docs": "ng build docs",
+    "serve:docs": "ng serve docs",
+    "test": "ng test angudes",
+    "lint": "ng lint"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.0.0 || ^18.0.0",
+    "@angular/core": "^17.0.0 || ^18.0.0",
+    "@angular/forms": "^17.0.0 || ^18.0.0",
+    "@angular/router": "^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.0 || ^18.0.0",
+    "@angular/cli": "^17.0.0 || ^18.0.0",
+    "@angular/compiler-cli": "^17.0.0 || ^18.0.0",
+    "@angular/common": "^17.0.0 || ^18.0.0",
+    "@angular/core": "^17.0.0 || ^18.0.0",
+    "@angular/platform-browser": "^17.0.0 || ^18.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0 || ^18.0.0",
+    "@angular/router": "^17.0.0 || ^18.0.0",
+    "@angular/forms": "^17.0.0 || ^18.0.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.0.0 || ^18.0.0",
+    "typescript": "~5.4.0",
+    "zone.js": "^0.14.0"
+  },
+  "sideEffects": false
+}

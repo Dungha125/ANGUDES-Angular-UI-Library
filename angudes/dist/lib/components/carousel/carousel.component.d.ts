@@ -1,0 +1,30 @@
+import { EventEmitter, OnInit, OnDestroy, ElementRef, AfterViewInit, QueryList } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
+    autoplay: boolean;
+    autoplayInterval: number;
+    showDots: boolean;
+    showArrows: boolean;
+    effect: 'slide' | 'fade';
+    dotsPosition: 'bottom' | 'top' | 'left' | 'right';
+    slideChange: EventEmitter<number>;
+    carouselContainer: ElementRef;
+    slides: QueryList<ElementRef>;
+    currentIndex: number;
+    private autoplayTimer;
+    private isTransitioning;
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+    goToSlide(index: number): void;
+    next(): void;
+    prev(): void;
+    private updateCarousel;
+    private startAutoplay;
+    private stopAutoplay;
+    onMouseEnter(): void;
+    onMouseLeave(): void;
+    getSlideCount(): number;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CarouselComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CarouselComponent, "agu-carousel", never, { "autoplay": { "alias": "autoplay"; "required": false; }; "autoplayInterval": { "alias": "autoplayInterval"; "required": false; }; "showDots": { "alias": "showDots"; "required": false; }; "showArrows": { "alias": "showArrows"; "required": false; }; "effect": { "alias": "effect"; "required": false; }; "dotsPosition": { "alias": "dotsPosition"; "required": false; }; }, { "slideChange": "slideChange"; }, never, ["*"], false, never>;
+}

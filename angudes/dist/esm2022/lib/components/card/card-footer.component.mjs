@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+export class CardFooterComponent {
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.14", ngImport: i0, type: CardFooterComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.14", type: CardFooterComponent, selector: "agu-card-footer", ngImport: i0, template: '<ng-content></ng-content>', isInline: true, styles: [":host{display:block;padding:1rem 1.5rem;border-top:1px solid #f0f0f0;background:#fafafa}\n"] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.14", ngImport: i0, type: CardFooterComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'agu-card-footer', standalone: false, template: '<ng-content></ng-content>', styles: [":host{display:block;padding:1rem 1.5rem;border-top:1px solid #f0f0f0;background:#fafafa}\n"] }]
+        }] });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FyZC1mb290ZXIuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYW5ndWRlcy9zcmMvbGliL2NvbXBvbmVudHMvY2FyZC9jYXJkLWZvb3Rlci5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLGVBQWUsQ0FBQzs7QUFnQjFDLE1BQU0sT0FBTyxtQkFBbUI7d0dBQW5CLG1CQUFtQjs0RkFBbkIsbUJBQW1CLHVEQVZwQiwyQkFBMkI7OzRGQVUxQixtQkFBbUI7a0JBYi9CLFNBQVM7K0JBQ0UsaUJBQWlCLGNBQ2YsS0FBSyxZQUNQLDJCQUEyQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdhZ3UtY2FyZC1mb290ZXInLFxyXG4gIHN0YW5kYWxvbmU6IGZhbHNlLFxyXG4gIHRlbXBsYXRlOiAnPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PicsXHJcbiAgc3R5bGVzOiBbYFxyXG4gICAgOmhvc3Qge1xyXG4gICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgICAgcGFkZGluZzogMXJlbSAxLjVyZW07XHJcbiAgICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBmMGYwO1xyXG4gICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xyXG4gICAgfVxyXG4gIGBdXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBDYXJkRm9vdGVyQ29tcG9uZW50IHsgfVxyXG5cclxuIl19

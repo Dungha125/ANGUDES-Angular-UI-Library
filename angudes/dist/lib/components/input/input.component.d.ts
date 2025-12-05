@@ -1,0 +1,32 @@
+import { EventEmitter } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+import * as i0 from "@angular/core";
+export declare class InputComponent implements ControlValueAccessor {
+    type: string;
+    placeholder: string;
+    disabled: boolean;
+    readonly: boolean;
+    size: 'sm' | 'md' | 'lg';
+    status: 'default' | 'error' | 'warning' | 'success';
+    prefix: string;
+    suffix: string;
+    allowClear: boolean;
+    onBlur: EventEmitter<FocusEvent>;
+    onFocus: EventEmitter<FocusEvent>;
+    onEnter: EventEmitter<KeyboardEvent>;
+    value: string;
+    focused: boolean;
+    private onChange;
+    private onTouched;
+    onInput(event: Event): void;
+    onBlurEvent(event: FocusEvent): void;
+    onFocusEvent(event: FocusEvent): void;
+    onKeyDown(event: KeyboardEvent): void;
+    clear(): void;
+    writeValue(value: string): void;
+    registerOnChange(fn: (value: string) => void): void;
+    registerOnTouched(fn: () => void): void;
+    setDisabledState(isDisabled: boolean): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputComponent, "agu-input", never, { "type": { "alias": "type"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "readonly": { "alias": "readonly"; "required": false; }; "size": { "alias": "size"; "required": false; }; "status": { "alias": "status"; "required": false; }; "prefix": { "alias": "prefix"; "required": false; }; "suffix": { "alias": "suffix"; "required": false; }; "allowClear": { "alias": "allowClear"; "required": false; }; }, { "onBlur": "onBlur"; "onFocus": "onFocus"; "onEnter": "onEnter"; }, never, never, false, never>;
+}

@@ -1,0 +1,63 @@
+import { Component, Input, Output, EventEmitter, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/common";
+export class CheckboxComponent {
+    label = '';
+    disabled = false;
+    indeterminate = false;
+    size = 'md';
+    change = new EventEmitter();
+    checked = false;
+    onChange = (value) => { };
+    onTouched = () => { };
+    toggle() {
+        if (!this.disabled) {
+            this.checked = !this.checked;
+            this.onChange(this.checked);
+            this.onTouched();
+            this.change.emit(this.checked);
+        }
+    }
+    writeValue(value) {
+        this.checked = value || false;
+    }
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
+    setDisabledState(isDisabled) {
+        this.disabled = isDisabled;
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.2.14", ngImport: i0, type: CheckboxComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.2.14", type: CheckboxComponent, selector: "agu-checkbox", inputs: { label: "label", disabled: "disabled", indeterminate: "indeterminate", size: "size" }, outputs: { change: "change" }, providers: [
+            {
+                provide: NG_VALUE_ACCESSOR,
+                useExisting: forwardRef(() => CheckboxComponent),
+                multi: true
+            }
+        ], ngImport: i0, template: "<label class=\"agu-checkbox\" [ngClass]=\"{'disabled': disabled, 'size-sm': size === 'sm', 'size-md': size === 'md', 'size-lg': size === 'lg'}\">\r\n  <input\r\n    type=\"checkbox\"\r\n    [checked]=\"checked\"\r\n    [disabled]=\"disabled\"\r\n    [indeterminate]=\"indeterminate\"\r\n    (change)=\"toggle()\"\r\n    style=\"display: none;\"\r\n  />\r\n  <span class=\"checkbox-box\" [ngClass]=\"{'checked': checked, 'indeterminate': indeterminate}\">\r\n    <svg *ngIf=\"checked && !indeterminate\" class=\"check-icon\" viewBox=\"0 0 16 16\" fill=\"none\">\r\n      <path d=\"M13.5 4L6 11.5L2.5 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n    </svg>\r\n    <svg *ngIf=\"indeterminate\" class=\"check-icon\" viewBox=\"0 0 16 16\" fill=\"none\">\r\n      <path d=\"M4 8H12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>\r\n    </svg>\r\n  </span>\r\n  <span class=\"checkbox-label\" *ngIf=\"label\">{{ label }}</span>\r\n  <ng-content></ng-content>\r\n</label>\r\n\r\n", styles: [".agu-checkbox{display:inline-flex;align-items:center;cursor:pointer;-webkit-user-select:none;user-select:none;gap:.5rem}.agu-checkbox.disabled{cursor:not-allowed;opacity:.6}.agu-checkbox .checkbox-box{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border:2px solid #d1d5db;border-radius:4px;background:#fff;transition:all .2s ease;flex-shrink:0}.agu-checkbox .checkbox-box .check-icon{width:12px;height:12px;color:#fff}.agu-checkbox .checkbox-box.checked,.agu-checkbox .checkbox-box.indeterminate{background-color:#1890ff;border-color:#1890ff}.agu-checkbox .checkbox-label{color:#374151;font-size:.875rem}.agu-checkbox.size-sm .checkbox-box{width:16px;height:16px}.agu-checkbox.size-sm .checkbox-box .check-icon{width:10px;height:10px}.agu-checkbox.size-sm .checkbox-label{font-size:.75rem}.agu-checkbox.size-lg .checkbox-box{width:24px;height:24px}.agu-checkbox.size-lg .checkbox-box .check-icon{width:14px;height:14px}.agu-checkbox.size-lg .checkbox-label{font-size:1rem}.agu-checkbox:not(.disabled):hover .checkbox-box{border-color:#1890ff}\n"], dependencies: [{ kind: "directive", type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }] });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.2.14", ngImport: i0, type: CheckboxComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'agu-checkbox', standalone: false, providers: [
+                        {
+                            provide: NG_VALUE_ACCESSOR,
+                            useExisting: forwardRef(() => CheckboxComponent),
+                            multi: true
+                        }
+                    ], template: "<label class=\"agu-checkbox\" [ngClass]=\"{'disabled': disabled, 'size-sm': size === 'sm', 'size-md': size === 'md', 'size-lg': size === 'lg'}\">\r\n  <input\r\n    type=\"checkbox\"\r\n    [checked]=\"checked\"\r\n    [disabled]=\"disabled\"\r\n    [indeterminate]=\"indeterminate\"\r\n    (change)=\"toggle()\"\r\n    style=\"display: none;\"\r\n  />\r\n  <span class=\"checkbox-box\" [ngClass]=\"{'checked': checked, 'indeterminate': indeterminate}\">\r\n    <svg *ngIf=\"checked && !indeterminate\" class=\"check-icon\" viewBox=\"0 0 16 16\" fill=\"none\">\r\n      <path d=\"M13.5 4L6 11.5L2.5 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n    </svg>\r\n    <svg *ngIf=\"indeterminate\" class=\"check-icon\" viewBox=\"0 0 16 16\" fill=\"none\">\r\n      <path d=\"M4 8H12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>\r\n    </svg>\r\n  </span>\r\n  <span class=\"checkbox-label\" *ngIf=\"label\">{{ label }}</span>\r\n  <ng-content></ng-content>\r\n</label>\r\n\r\n", styles: [".agu-checkbox{display:inline-flex;align-items:center;cursor:pointer;-webkit-user-select:none;user-select:none;gap:.5rem}.agu-checkbox.disabled{cursor:not-allowed;opacity:.6}.agu-checkbox .checkbox-box{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border:2px solid #d1d5db;border-radius:4px;background:#fff;transition:all .2s ease;flex-shrink:0}.agu-checkbox .checkbox-box .check-icon{width:12px;height:12px;color:#fff}.agu-checkbox .checkbox-box.checked,.agu-checkbox .checkbox-box.indeterminate{background-color:#1890ff;border-color:#1890ff}.agu-checkbox .checkbox-label{color:#374151;font-size:.875rem}.agu-checkbox.size-sm .checkbox-box{width:16px;height:16px}.agu-checkbox.size-sm .checkbox-box .check-icon{width:10px;height:10px}.agu-checkbox.size-sm .checkbox-label{font-size:.75rem}.agu-checkbox.size-lg .checkbox-box{width:24px;height:24px}.agu-checkbox.size-lg .checkbox-box .check-icon{width:14px;height:14px}.agu-checkbox.size-lg .checkbox-label{font-size:1rem}.agu-checkbox:not(.disabled):hover .checkbox-box{border-color:#1890ff}\n"] }]
+        }], propDecorators: { label: [{
+                type: Input
+            }], disabled: [{
+                type: Input
+            }], indeterminate: [{
+                type: Input
+            }], size: [{
+                type: Input
+            }], change: [{
+                type: Output
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hlY2tib3guY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYW5ndWRlcy9zcmMvbGliL2NvbXBvbmVudHMvY2hlY2tib3gvY2hlY2tib3guY29tcG9uZW50LnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvYW5ndWRlcy9zcmMvbGliL2NvbXBvbmVudHMvY2hlY2tib3gvY2hlY2tib3guY29tcG9uZW50Lmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLFlBQVksRUFBRSxVQUFVLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDbkYsT0FBTyxFQUF3QixpQkFBaUIsRUFBRSxNQUFNLGdCQUFnQixDQUFDOzs7QUFlekUsTUFBTSxPQUFPLGlCQUFpQjtJQUNuQixLQUFLLEdBQVcsRUFBRSxDQUFDO0lBQ25CLFFBQVEsR0FBWSxLQUFLLENBQUM7SUFDMUIsYUFBYSxHQUFZLEtBQUssQ0FBQztJQUMvQixJQUFJLEdBQXVCLElBQUksQ0FBQztJQUMvQixNQUFNLEdBQUcsSUFBSSxZQUFZLEVBQVcsQ0FBQztJQUUvQyxPQUFPLEdBQVksS0FBSyxDQUFDO0lBQ2pCLFFBQVEsR0FBRyxDQUFDLEtBQWMsRUFBRSxFQUFFLEdBQUUsQ0FBQyxDQUFDO0lBQ2xDLFNBQVMsR0FBRyxHQUFHLEVBQUUsR0FBRSxDQUFDLENBQUM7SUFFN0IsTUFBTTtRQUNKLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUM7WUFDbkIsSUFBSSxDQUFDLE9BQU8sR0FBRyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUM7WUFDN0IsSUFBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDNUIsSUFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDO1lBQ2pCLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNqQyxDQUFDO0lBQ0gsQ0FBQztJQUVELFVBQVUsQ0FBQyxLQUFjO1FBQ3ZCLElBQUksQ0FBQyxPQUFPLEdBQUcsS0FBSyxJQUFJLEtBQUssQ0FBQztJQUNoQyxDQUFDO0lBRUQsZ0JBQWdCLENBQUMsRUFBNEI7UUFDM0MsSUFBSSxDQUFDLFFBQVEsR0FBRyxFQUFFLENBQUM7SUFDckIsQ0FBQztJQUVELGlCQUFpQixDQUFDLEVBQWM7UUFDOUIsSUFBSSxDQUFDLFNBQVMsR0FBRyxFQUFFLENBQUM7SUFDdEIsQ0FBQztJQUVELGdCQUFnQixDQUFDLFVBQW1CO1FBQ2xDLElBQUksQ0FBQyxRQUFRLEdBQUcsVUFBVSxDQUFDO0lBQzdCLENBQUM7d0dBbENVLGlCQUFpQjs0RkFBakIsaUJBQWlCLHNLQVJqQjtZQUNUO2dCQUNFLE9BQU8sRUFBRSxpQkFBaUI7Z0JBQzFCLFdBQVcsRUFBRSxVQUFVLENBQUMsR0FBRyxFQUFFLENBQUMsaUJBQWlCLENBQUM7Z0JBQ2hELEtBQUssRUFBRSxJQUFJO2FBQ1o7U0FDRiwwQkNkSCxnaUNBcUJBOzs0RkRMYSxpQkFBaUI7a0JBYjdCLFNBQVM7K0JBQ0UsY0FBYyxjQUNaLEtBQUssYUFHTjt3QkFDVDs0QkFDRSxPQUFPLEVBQUUsaUJBQWlCOzRCQUMxQixXQUFXLEVBQUUsVUFBVSxDQUFDLEdBQUcsRUFBRSxrQkFBa0IsQ0FBQzs0QkFDaEQsS0FBSyxFQUFFLElBQUk7eUJBQ1o7cUJBQ0Y7OEJBR1EsS0FBSztzQkFBYixLQUFLO2dCQUNHLFFBQVE7c0JBQWhCLEtBQUs7Z0JBQ0csYUFBYTtzQkFBckIsS0FBSztnQkFDRyxJQUFJO3NCQUFaLEtBQUs7Z0JBQ0ksTUFBTTtzQkFBZixNQUFNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBJbnB1dCwgT3V0cHV0LCBFdmVudEVtaXR0ZXIsIGZvcndhcmRSZWYgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgQ29udHJvbFZhbHVlQWNjZXNzb3IsIE5HX1ZBTFVFX0FDQ0VTU09SIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdhZ3UtY2hlY2tib3gnLFxyXG4gIHN0YW5kYWxvbmU6IGZhbHNlLFxyXG4gIHRlbXBsYXRlVXJsOiAnLi9jaGVja2JveC5jb21wb25lbnQuaHRtbCcsXHJcbiAgc3R5bGVVcmw6ICcuL2NoZWNrYm94LmNvbXBvbmVudC5zY3NzJyxcclxuICBwcm92aWRlcnM6IFtcclxuICAgIHtcclxuICAgICAgcHJvdmlkZTogTkdfVkFMVUVfQUNDRVNTT1IsXHJcbiAgICAgIHVzZUV4aXN0aW5nOiBmb3J3YXJkUmVmKCgpID0+IENoZWNrYm94Q29tcG9uZW50KSxcclxuICAgICAgbXVsdGk6IHRydWVcclxuICAgIH1cclxuICBdXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBDaGVja2JveENvbXBvbmVudCBpbXBsZW1lbnRzIENvbnRyb2xWYWx1ZUFjY2Vzc29yIHtcclxuICBASW5wdXQoKSBsYWJlbDogc3RyaW5nID0gJyc7XHJcbiAgQElucHV0KCkgZGlzYWJsZWQ6IGJvb2xlYW4gPSBmYWxzZTtcclxuICBASW5wdXQoKSBpbmRldGVybWluYXRlOiBib29sZWFuID0gZmFsc2U7XHJcbiAgQElucHV0KCkgc2l6ZTogJ3NtJyB8ICdtZCcgfCAnbGcnID0gJ21kJztcclxuICBAT3V0cHV0KCkgY2hhbmdlID0gbmV3IEV2ZW50RW1pdHRlcjxib29sZWFuPigpO1xyXG5cclxuICBjaGVja2VkOiBib29sZWFuID0gZmFsc2U7XHJcbiAgcHJpdmF0ZSBvbkNoYW5nZSA9ICh2YWx1ZTogYm9vbGVhbikgPT4ge307XHJcbiAgcHJpdmF0ZSBvblRvdWNoZWQgPSAoKSA9PiB7fTtcclxuXHJcbiAgdG9nZ2xlKCk6IHZvaWQge1xyXG4gICAgaWYgKCF0aGlzLmRpc2FibGVkKSB7XHJcbiAgICAgIHRoaXMuY2hlY2tlZCA9ICF0aGlzLmNoZWNrZWQ7XHJcbiAgICAgIHRoaXMub25DaGFuZ2UodGhpcy5jaGVja2VkKTtcclxuICAgICAgdGhpcy5vblRvdWNoZWQoKTtcclxuICAgICAgdGhpcy5jaGFuZ2UuZW1pdCh0aGlzLmNoZWNrZWQpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgd3JpdGVWYWx1ZSh2YWx1ZTogYm9vbGVhbik6IHZvaWQge1xyXG4gICAgdGhpcy5jaGVja2VkID0gdmFsdWUgfHwgZmFsc2U7XHJcbiAgfVxyXG5cclxuICByZWdpc3Rlck9uQ2hhbmdlKGZuOiAodmFsdWU6IGJvb2xlYW4pID0+IHZvaWQpOiB2b2lkIHtcclxuICAgIHRoaXMub25DaGFuZ2UgPSBmbjtcclxuICB9XHJcblxyXG4gIHJlZ2lzdGVyT25Ub3VjaGVkKGZuOiAoKSA9PiB2b2lkKTogdm9pZCB7XHJcbiAgICB0aGlzLm9uVG91Y2hlZCA9IGZuO1xyXG4gIH1cclxuXHJcbiAgc2V0RGlzYWJsZWRTdGF0ZShpc0Rpc2FibGVkOiBib29sZWFuKTogdm9pZCB7XHJcbiAgICB0aGlzLmRpc2FibGVkID0gaXNEaXNhYmxlZDtcclxuICB9XHJcbn1cclxuXHJcbiIsIjxsYWJlbCBjbGFzcz1cImFndS1jaGVja2JveFwiIFtuZ0NsYXNzXT1cInsnZGlzYWJsZWQnOiBkaXNhYmxlZCwgJ3NpemUtc20nOiBzaXplID09PSAnc20nLCAnc2l6ZS1tZCc6IHNpemUgPT09ICdtZCcsICdzaXplLWxnJzogc2l6ZSA9PT0gJ2xnJ31cIj5cclxuICA8aW5wdXRcclxuICAgIHR5cGU9XCJjaGVja2JveFwiXHJcbiAgICBbY2hlY2tlZF09XCJjaGVja2VkXCJcclxuICAgIFtkaXNhYmxlZF09XCJkaXNhYmxlZFwiXHJcbiAgICBbaW5kZXRlcm1pbmF0ZV09XCJpbmRldGVybWluYXRlXCJcclxuICAgIChjaGFuZ2UpPVwidG9nZ2xlKClcIlxyXG4gICAgc3R5bGU9XCJkaXNwbGF5OiBub25lO1wiXHJcbiAgLz5cclxuICA8c3BhbiBjbGFzcz1cImNoZWNrYm94LWJveFwiIFtuZ0NsYXNzXT1cInsnY2hlY2tlZCc6IGNoZWNrZWQsICdpbmRldGVybWluYXRlJzogaW5kZXRlcm1pbmF0ZX1cIj5cclxuICAgIDxzdmcgKm5nSWY9XCJjaGVja2VkICYmICFpbmRldGVybWluYXRlXCIgY2xhc3M9XCJjaGVjay1pY29uXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiIGZpbGw9XCJub25lXCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNMTMuNSA0TDYgMTEuNUwyLjUgOFwiIHN0cm9rZT1cImN1cnJlbnRDb2xvclwiIHN0cm9rZS13aWR0aD1cIjJcIiBzdHJva2UtbGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlLWxpbmVqb2luPVwicm91bmRcIi8+XHJcbiAgICA8L3N2Zz5cclxuICAgIDxzdmcgKm5nSWY9XCJpbmRldGVybWluYXRlXCIgY2xhc3M9XCJjaGVjay1pY29uXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiIGZpbGw9XCJub25lXCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNNCA4SDEyXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlLXdpZHRoPVwiMlwiIHN0cm9rZS1saW5lY2FwPVwicm91bmRcIi8+XHJcbiAgICA8L3N2Zz5cclxuICA8L3NwYW4+XHJcbiAgPHNwYW4gY2xhc3M9XCJjaGVja2JveC1sYWJlbFwiICpuZ0lmPVwibGFiZWxcIj57eyBsYWJlbCB9fTwvc3Bhbj5cclxuICA8bmctY29udGVudD48L25nLWNvbnRlbnQ+XHJcbjwvbGFiZWw+XHJcblxyXG4iXX0=
