@@ -1,8 +1,8 @@
 {
   "name": "angudes",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Angular UI Component Library",
-  "author": "",
+  "author": "dungha",
   "license": "MIT",
   "keywords": [
     "angular",

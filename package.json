@@ -1,8 +1,8 @@
 {
   "name": "angudes",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Angular UI Component Library - A comprehensive collection of reusable UI components",
-  "author": "Dungha",
+  "author": "dungha",
   "license": "MIT",
   "repository": {
     "type": "git",
